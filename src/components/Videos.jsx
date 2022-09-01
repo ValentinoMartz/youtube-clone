@@ -1,7 +1,7 @@
 import React from "react";
 
-const Videos = () => {
-  return <div>AAAAAAAAAA!</div>;
+const Videos = ({ videos }) => {
+  return <div>a!</div>;
 };
 
 export default Videos;
