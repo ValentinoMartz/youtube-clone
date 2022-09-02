@@ -14,14 +14,7 @@ const Feed = () => {
   }, [selectedCategory]);
 
   return (
-    <Stack
-      sx={{
-        flexDirection: {
-          sx: "column",
-          md: "row",
-        },
-      }}
-    >
+    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
@@ -33,24 +26,26 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
+
         <Typography
           className="copyright"
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright 2022 Valentino Martinez
+          Valentino Martinez © 2022
         </Typography>
       </Box>
+
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
           variant="h4"
-          color="initial"
           fontWeight="bold"
-          md={2}
+          mb={2}
           sx={{ color: "white" }}
         >
-          {selectedCategory} <span style={{ color: "#F31503" }}>Videos</span>
+          {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
+
         <Videos videos={videos} />
       </Box>
     </Stack>
