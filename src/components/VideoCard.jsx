@@ -18,17 +18,21 @@ const VideoCard = ({
   },
 }) => {
   //atento para mostrar esto en el video
-  console.log(snippet);
-  if (!snippet.title) {
-    snippet.title = demoVideoTitle.slice(0, 60);
-  }
-  if (snippet.title.length < 60) {
-    let published = snippet.publishedAt.split("T")[0];
-    snippet.title = snippet.title.padEnd(
-      60,
-      ` - ${published} - ${snippet.channelTitle} - ${snippet.description} -`
-    );
-  }
+  let published;
+
+  const titleOpt = (snippet) => {
+    if (!snippet.length) {
+      snippet.title = demoVideoTitle;
+      if (snippet.title.length < 60) {
+        let published = snippet.publishedAt.split("T")[0];
+        snippet.title = snippet.title.padEnd(
+          60,
+          ` - ${published} - ${snippet.channelTitle} - ${snippet.description} -`
+        );
+      }
+      return snippet.title.slice(0, 48);
+    }
+  };
 
   return (
     <Card
@@ -48,7 +52,7 @@ const VideoCard = ({
       <CardContent sx={{ backgroundColor: "#1E1E1E", height: "106px" }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
-            {snippet.title.slice(0, 48)}
+            {snippet ? titleOpt(snippet) : null}
           </Typography>
         </Link>
         <Link
@@ -71,12 +75,3 @@ const VideoCard = ({
 };
 
 export default VideoCard;
-
-//Virtue Overthrow - Vampire: The Masquerade - New York By Nig
-
-/* lo ultimo que hice
-{snippet.title && snippet.title.length < 60
-? snippet.title.concat(`                     `)
-: snippet.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
-
-*/
