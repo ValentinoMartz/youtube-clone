@@ -17,6 +17,14 @@ const Navbar = () => (
   >
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="logo" height={45} />
+      <Typography
+        variant="h5"
+        color="#fff"
+        ml={1}
+        sx={{ display: { xs: "none", sm: "flex", md: "flex" } }}
+      >
+        Youtube
+      </Typography>
     </Link>
     <SearchBar />
   </Stack>

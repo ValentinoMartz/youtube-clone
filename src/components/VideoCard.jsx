@@ -17,23 +17,20 @@ const VideoCard = ({
     snippet,
   },
 }) => {
-  //atento para mostrar esto en el video
-  let published;
+  let titleMax = "";
+  if (snippet) {
+    titleMax =
+      titleMax +
+      snippet.title +
+      " - " +
+      snippet.channelTitle +
+      " - " +
+      snippet.description +
+      " - " +
+      snippet.channelTitle;
+  }
 
-  const titleOpt = (snippet) => {
-    if (!snippet.length) {
-      snippet.title = demoVideoTitle;
-      if (snippet.title.length < 60) {
-        let published = snippet.publishedAt.split("T")[0];
-        snippet.title = snippet.title.padEnd(
-          60,
-          ` - ${published} - ${snippet.channelTitle} - ${snippet.description} -`
-        );
-      }
-      return snippet.title.slice(0, 48);
-    }
-  };
-
+  titleMax = titleMax.replace(`&#39;`, "'");
   return (
     <Card
       sx={{
@@ -52,7 +49,7 @@ const VideoCard = ({
       <CardContent sx={{ backgroundColor: "#1E1E1E", height: "106px" }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
-            {snippet ? titleOpt(snippet) : null}
+            {snippet ? titleMax.slice(0, 60) : demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
         <Link
@@ -75,3 +72,4 @@ const VideoCard = ({
 };
 
 export default VideoCard;
+//

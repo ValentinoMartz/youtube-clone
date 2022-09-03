@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import { Sidebar, Videos } from "./";
+import { Sidebar, Videos, Loader } from "./";
 import { fetchFromAPI } from "./../utils/fetchFromAPI";
 
 const Feed = () => {
@@ -15,6 +15,10 @@ const Feed = () => {
     );
   }, [selectedCategory]);
 
+  if (!videos) {
+    return <Loader />;
+  }
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -28,14 +32,19 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-
-        <Typography
-          className="copyright"
-          variant="body2"
-          sx={{ mt: 1.5, color: "#fff" }}
+        <a
+          href="https://valentinomartinez-portfolio.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
         >
-          Valentino Martinez © 2022
-        </Typography>
+          <Typography
+            className="copyright"
+            variant="body2"
+            sx={{ mt: 1.5, color: "#fff" }}
+          >
+            Valentino Martinez © 2022
+          </Typography>
+        </a>
       </Box>
 
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
