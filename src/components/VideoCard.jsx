@@ -26,7 +26,7 @@ const VideoCard = ({
     let published = snippet.publishedAt.split("T")[0];
     snippet.title = snippet.title.padEnd(
       60,
-      ` // ${published} - ${snippet.channelTitle} - ${snippet.description} -`
+      ` - ${published} - ${snippet.channelTitle} - ${snippet.description} -`
     );
   }
 
