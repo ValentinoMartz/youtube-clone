@@ -18,7 +18,6 @@ export const logo = yt;
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
-  { name: "JS Mastery", icon: <CodeIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
   { name: "NextJS", icon: <CodeIcon /> },
@@ -36,11 +35,14 @@ export const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
-export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
-export const demoVideoUrl = "/video/GDa8kZLNhJ4";
-export const demoChannelTitle = "JavaScript Mastery";
-export const demoVideoTitle =
-  "Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI";
+export const demoThumbnailUrl =
+  "https://user-images.githubusercontent.com/88751880/174874271-af52946e-72ff-4386-a784-9be3744fcec4.gif";
+export const demoChannelUrl = "/channel/UCXtY0KPdLWw-iPRbmfadRzg";
+export const demoVideoUrl = "/video/GGwUpytD8Hw";
+export const demoChannelTitle = "Florencia Palazzo";
+export const demoVideoTitle = "Proyecto Grupal Henry";
 export const demoProfilePicture =
-  "http://dergipark.org.tr/assets/app/images/buddy_sample.png";
+  "https://user-images.githubusercontent.com/88751880/174874271-af52946e-72ff-4386-a784-9be3744fcec4.gif";
+
+// video/GGwUpytD8Hw
+//https://www.youtube.com/watch?v=GGwUpytD8Hw&t=6s&ab_channel=FlorenciaPalazzo
