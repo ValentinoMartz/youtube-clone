@@ -23,24 +23,20 @@ valentinomartinez55@gmail.com
 
 <img src="./imgs/Sidebar.png">
 <br/>
-<br/>
 
 #### Searchbar where you can search for the content you want!
 
 <img src="./imgs/Searchbar.png">
-<br/>
 <br/>
 
 #### Player within the same page to see the videos you want
 
 <img src="./imgs/Rep.png">
 <br/>
-<br/>
 
 #### Total responsiveness of all components, adapting to tablets and cell phones without problems
 
 <img src="./imgs/Responsive.png">
-<br/>
 <br/>
 <br/>
 
